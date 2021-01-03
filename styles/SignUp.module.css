@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -350px;  
+    margin-left: 30px;
+}
+
+.form{
+    margin-top: 70px;
+    margin-left: -15px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form h2{
+
+}
+
+.form input{
+    padding: 10px;
+}
+
+.email{
+    margin-top: 20px;
+}
+
+.password{
+    margin-top: 20px;
+}
+
+.signUp{
+    border: 0;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+
+    height: 50px;
+    width: 80%;
+    background-color: #567DF4;
+    transition: background-color 0.3s;
+}
+
+.signUp:hover{
+    background-color: #567df4bb;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options p{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.images{
+    margin-top: 10px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.instagram, .twitter, .facebook{
+    cursor: pointer;
+}
