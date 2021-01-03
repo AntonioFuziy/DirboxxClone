@@ -1,2 +1,2 @@
 # DirboxxClone
-A clone of a Cloud Storage app frontend
+A clone of a Cloud Storage app frontend using NextJS
