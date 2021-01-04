@@ -4,6 +4,7 @@ import styles from '../styles/Profile.module.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import SubHeader from './components/SubHeader';
 
 export default function Profile(){
   return(
@@ -21,15 +22,8 @@ export default function Profile(){
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare pretium placerat ut platea.</p>
       </div>
 
-      <header className={styles.subHeader}>
-        <h4>My Folders</h4>
-        <div className={styles.actions}>
-          <img src="/images/add.png" alt="Add" width={11} height={11}/>
-          <img src="/images/settings.png" alt="Settings" width={18} height={12}/>
-          <img src="/images/forward.png" alt="Forward" width={6} height={12}/>
-        </div>
-        
-      </header>
+      <SubHeader/>
+
       <div className={styles.alignmentGrid}>
         <div className={styles.grid}>
           <div className={styles.child1}>
@@ -69,6 +63,39 @@ export default function Profile(){
             </h3>
           </div>
         </div>
+      </div>
+      
+      <SubHeader/>
+
+      <div className={styles.documents}>
+        <div className={styles.document}>
+          <img src="/images/wordIcon.png" className={styles.wordIcon} alt=""/>
+          <div className={styles.text}>
+            <h4>Projects.docx</h4>
+            <p>November 22, 2020</p>
+          </div>
+        </div>
+        <p>300 KB</p>
+      </div>
+      <div className={styles.documents}>
+        <div className={styles.document}>
+          <img src="/images/wordIcon.png" className={styles.wordIcon} alt=""/>
+          <div className={styles.text}>
+            <h4>Projects.docx</h4>
+            <p>November 22, 2020</p>
+          </div>
+        </div>
+        <p>300 KB</p>
+      </div>
+      <div className={styles.documents}>
+        <div className={styles.document}>
+          <img src="/images/wordIcon.png" className={styles.wordIcon} alt=""/>
+          <div className={styles.text}>
+            <h4>Projects.docx</h4>
+            <p>November 22, 2020</p>
+          </div>
+        </div>
+        <p>300 KB</p>
       </div>
     </div>
   )

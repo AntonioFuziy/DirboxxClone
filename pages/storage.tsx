@@ -59,7 +59,7 @@ export default function Storage(){
                 </div>
             </main>
             
-            <Link href="/sign">
+            <Link href="/profile">
                 <button className={styles.button}>
                     <a>Export Details</a>
                 </button>

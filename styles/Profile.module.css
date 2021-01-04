@@ -1,6 +1,4 @@
 .container{
-    padding: 30px 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,27 +30,6 @@
 .profile p{
     font-weight: 300;
     line-height: 20px;
-}
-
-.subHeader{
-    width: 100%;
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.actions{
-    width: 30%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.actions img{
-    cursor: pointer;
 }
 
 .grid{
@@ -92,6 +69,7 @@
 }
 
 .grid h3{
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -115,4 +93,40 @@
 
 .child4{
     background: #F0FFFF;
+}
+
+.documents{
+    margin-top: 5px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.document{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text{
+    margin-left: 20px;
+    line-height: 0;
+}
+
+.text h4{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.documents p{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.wordIcon{
+    width: 42px;
+    height: 42px;
 }
