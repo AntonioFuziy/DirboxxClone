@@ -1,65 +1,52 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';
 
-export default function Home() {
-  return (
+import styles from '../styles/Sign.module.css';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function Sign(){
+  return(
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Image src="/images/background.png" width={400} height={500}/>
+      <div className={styles.main}>
+        <Image src="/images/signIcon.png" width={171} height={189}/>
+        <div className={styles.text}>
+          <p className={styles.welcome}>
+            Welcome to
+            <h2 className={styles.name}>Dirbbox</h2>
+          </p>
+          <p className={styles.description1}>Best cloud storage platform of all business and individuals to manage there data.</p>
+          <p className={styles.description2}>Join For Free.</p>
         </div>
-      </main>
-
+        <div className={styles.buttons}>
+          <button className={styles.id}>
+            <Image src="/images/id.png" width={23.31} height={25.89}/>
+            <p>Smart Id</p>
+          </button>
+          <Link href="/signIn">
+            <button className={styles.signIn}>
+              <p>Sign In</p>
+              <Image src="/images/goTo.png" width={16} height={8}/>
+            </button>
+          </Link>
+        </div>
+      </div>
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <div className={styles.options}>
+          <p>Use Social Login</p>
+          <div className={styles.images}>
+            <Image src="/images/instagramLogo.png" width={17.9} height={17.9} className={styles.instagram}/>
+            <Image src="/images/twitterLogo.png" width={18.93} height={15.38} className={styles.twitter}/>
+            <Image src="/images/facebookLogo.png" width={10.07} height={18.63} className={styles.facebook}/>
+          </div>
+        </div>
+        <Link href="/signUp">
+          <button className={styles.signUp}>
+            Create an account
+          </button>
+        </Link>
       </footer>
     </div>
-  )
+  );
 }
