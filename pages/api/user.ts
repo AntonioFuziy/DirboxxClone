@@ -18,7 +18,7 @@ export default async(req: NextApiRequest, res:NextApiResponse<ErrorResponseType 
     const { db } = await connectDatabase();
 
     if(!email || !password){
-      res.status(400).json({ error: "erro de campo" });
+      res.status(400).json({ error: "Missing parameters" });
       return;
     }
 
