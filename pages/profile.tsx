@@ -4,7 +4,7 @@ import styles from '../styles/Profile.module.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import SubHeader from './components/SubHeader';
+import SubHeader from './components/SubHeader/SubHeader';
 
 export default function Profile(){
   return(

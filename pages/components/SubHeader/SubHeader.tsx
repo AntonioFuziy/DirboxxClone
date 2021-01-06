@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles/SubHeader.module.css';
+import styles from './SubHeader.module.css';
 
 export default function SubHeader(){
   return(

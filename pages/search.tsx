@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from '../styles/Search.module.css';
-import SubHeader from './components/SubHeader';
+import SubHeader from './components/SubHeader/SubHeader';
 
 export default function Search(){
   return(
