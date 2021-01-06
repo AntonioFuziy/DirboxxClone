@@ -29,7 +29,7 @@ export default function Sign(){
 
             {session && <>
               Logged in as {session.user.email} <br/>
-              {session.user.name}
+              {session.user.name} <br/>
             </>}
 
             {loading && <>

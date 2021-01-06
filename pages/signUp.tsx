@@ -30,7 +30,7 @@ export default function SignUp(){
       <Image src="/images/background.png" width={400} height={500}/>
       <div className={styles.main}>
         <Image src="/images/signIcon.png" width={171} height={189}/>
-        <form onSubmit={handleSubmit} action="" className={styles.form}>
+        <form onSubmit={handleSubmit} className={styles.form}>
             <h2>Create your account</h2>
             <input 
               type="email" 
