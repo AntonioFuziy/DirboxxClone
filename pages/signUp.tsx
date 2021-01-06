@@ -19,7 +19,7 @@ export default function SignUp(){
     console.log(data)
 
     try{
-      await axios.post("https://dirboxx-clone.vercel.app/api/user", data)
+      await axios.post("https://dirboxx-clone-production.vercel.app/api/user", data)
     } catch(error){
       alert(error)
     }
