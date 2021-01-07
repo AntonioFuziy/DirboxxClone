@@ -8,7 +8,7 @@ export default function Search(){
   const [videos, setVideos] = useState([])
   useEffect(() => {
     async function fetchData() {    
-      const videos = await axios.get("https://dirboxx-clone.vercel.app/api/tutorials") 
+      const videos = await axios.get("http://localhost:3000/api/tutorials") 
       setVideos(videos.data)
       console.log(videos);
       return videos;
