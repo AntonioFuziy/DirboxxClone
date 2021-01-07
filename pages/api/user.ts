@@ -1,10 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import connectDatabase from '../../utils/database';
-
 interface ErrorResponseType{
   error: string
 }
-
 interface SuccessResponseType{
   _id: string;
   email: string;
