@@ -1,10 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import connectDatabase from '../../utils/database';
-
-interface ErrorResponseType{
-  error: string
-}
-
 interface SuccessResponseType{
   _id: string;
   user: string;
@@ -15,11 +10,7 @@ interface SuccessResponseType{
   dislikes: number;
 }
 
-interface OkResponseType{
-  ok: string;
-}
-
-export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType | SuccessResponseType | OkResponseType>): Promise<void> => {
+export default async (req:NextApiRequest, res:NextApiResponse): Promise<SuccessResponseType[]> => {
   if(req.method === "POST"){
     const { user, title, description, link, likes, dislikes } = req.body;
 
@@ -30,7 +21,7 @@ export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType 
       return;
     }
 
-    const lineSplit = link.split("=")
+    const lineSplit = link.split("=", 2)
     const newLink = lineSplit[1]
 
     const response = await db.collection("videos").insertOne({
@@ -47,7 +38,7 @@ export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType 
 
     const response = await db.collection("videos").find({}).sort({ metacritic: -1 }).limit(20).toArray();
 
-    res.status(200).json({ok: "User created"})
+    res.status(200).json(response)
     console.log(response)
   } else{
     res.status(400).json({ error: "wrong method" })

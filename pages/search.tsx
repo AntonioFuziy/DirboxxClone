@@ -29,7 +29,7 @@ export default function Search(){
           {
             videos.map((video) => (
             <div className={styles.item}>
-              <iframe src={"https://www.youtube.com/embed/"+video.link} className={styles.iframe} frameBorder="0" allowFullScreen></iframe>
+              <iframe src={"https://www.youtube.com/embed/"+video.newLink} className={styles.iframe} frameBorder="0" allowFullScreen></iframe>
               <h3>{video.title}</h3>
               <p>{video.description}</p>
             </div>
