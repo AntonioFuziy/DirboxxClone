@@ -15,7 +15,11 @@ interface SuccessResponseType{
   dislikes: number;
 }
 
-export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType | SuccessResponseType>): Promise<void> => {
+interface OkResponseType{
+  ok: string;
+}
+
+export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType | SuccessResponseType | OkResponseType>): Promise<void> => {
   if(req.method === "POST"){
     const { user, title, description, link, likes, dislikes } = req.body;
 
@@ -43,7 +47,7 @@ export default async (req:NextApiRequest, res:NextApiResponse<ErrorResponseType 
 
     const response = await db.collection("videos").find({}).sort({ metacritic: -1 }).limit(20).toArray();
 
-    res.status(200).json(response)
+    res.status(200).json({ok: "User created"})
     console.log(response)
   } else{
     res.status(400).json({ error: "wrong method" })
