@@ -34,7 +34,7 @@ export default function UploadTutorial(){
     console.log(data)
 
     try{
-      axios.post("https://dirboxx-clone-3mtmujl0q.vercel.app.app/api/tutorials", data)
+      axios.post("https://dirboxx-clone.vercel.app/api/tutorials", data)
     } catch(error){
       alert(error)
     }
