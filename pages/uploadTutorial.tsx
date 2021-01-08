@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from '../styles/UploadTutorial.module.css';
 
@@ -10,15 +10,22 @@ export default function UploadTutorial(){
   const [session, loading] = useSession();
 
   const [user, setUser] = useState("");
-  if (session){
-    const [user, setUser] = useState(session.user.name);
-  }
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
+
+  useEffect(() => {
+    function setSession(){
+      if (session){
+        setUser(session.user.name)
+        console.log(session.user.name)
+      }
+    }
+    setSession()
+  }, [])
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

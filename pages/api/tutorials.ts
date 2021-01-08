@@ -8,6 +8,7 @@ interface SuccessResponseType{
   link: string;
   likes: number;
   dislikes: number;
+  // instrument: string[];
 }
 
 export default async (req:NextApiRequest, res:NextApiResponse): Promise<SuccessResponseType[]> => {
@@ -21,8 +22,16 @@ export default async (req:NextApiRequest, res:NextApiResponse): Promise<SuccessR
       return;
     }
 
-    const lineSplit = link.split("=", 2)
-    const newLink = lineSplit[1]
+    var newLink = ""
+
+    if (link.includes("&")){
+      const firstLink = link.split("&")[0]
+      newLink = firstLink.split("=")[1]
+    } else{
+      const lineSplit = link.split("=")
+      newLink = lineSplit[1]
+    }
+    console.log(newLink)
 
     const response = await db.collection("videos").insertOne({
       user,

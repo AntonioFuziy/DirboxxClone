@@ -1,0 +1,21 @@
+
+.item{
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item:hover{
+  background-color: #f0f0f0;
+}
+
+.iframe{
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.inputNone{
+  display: none;
+}
