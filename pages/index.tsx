@@ -23,30 +23,27 @@ export default function Sign(){
             <p className={styles.description1}>Best cloud storage platform of all business and individuals to manage there data.</p>
             <p className={styles.description2}>Join For Free.</p>
 
-            {!session && <>
-              Not signed in <br/>
-            </>}
-
-            {session && <>
-              Logged in as {session.user.email} <br/>
-              {session.user.name} <br/>
-            </>}
-
             {loading && <>
               Loading...
             </>}
           </div>
           <div className={styles.buttons}>
-            <button className={styles.id}>
-              <Image src="/images/id.png" width={23.31} height={25.89}/>
-              <p>Smart Id</p>
-            </button>
-            <Link href="">
-              <button className={styles.signIn} onClick={(): Promise<void> =>signIn('auth0')}>
-                <p>Sign In</p>
-                <Image src="/images/goTo.png" width={16} height={8}/>
-              </button>
-            </Link>
+            {session && <>
+              <Link href="">
+                <button className={styles.signOut} onClick={(): Promise<void> =>signOut()}>
+                  <p>Sign Out</p>
+                  <Image src="/images/goTo.png" width={16} height={8}/>
+                </button>
+              </Link>
+            </>}
+            {!session && <>
+              <Link href="">
+                <button className={styles.signIn} onClick={(): Promise<void> =>signIn('auth0')}>
+                  <p>Sign In</p>
+                  <Image src="/images/goTo.png" width={16} height={8}/>
+                </button>
+              </Link>
+            </>}
           </div>
         </div>
         <footer className={styles.footer}>

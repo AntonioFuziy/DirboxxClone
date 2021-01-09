@@ -46,7 +46,7 @@
     justify-content: space-evenly;
 }
 
-.id, .signIn{
+.signOut, .signIn{
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -65,8 +65,8 @@
     background-color: #567df4bb;
 }
 
-.id:hover{
-    background-color: #567df4a6;
+.signOut:hover{
+    background-color: #ec5858b7;
 }
 
 .signIn{
@@ -74,9 +74,9 @@
     background: #567DF4;
 }
 
-.id{
-    color: #567DF4;
-    background: #567df43a;
+.signOut{
+    color: #f0f0f0;
+    background: #ec5858;
 }
 
 .footer{
