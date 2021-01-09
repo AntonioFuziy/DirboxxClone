@@ -23,7 +23,7 @@
 .grid{
   margin-top: 30px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
 }
@@ -34,8 +34,9 @@
   border-radius: 10px;
   padding: 20px;
   cursor: pointer;
-  background: #212121;
-  color: #f0f0f0;
+  width: 100%;
+  background: #f0f0f0;
+  color: #000;
   margin-bottom: 20px;
   transition: background-color 0.3s;
 }
@@ -45,7 +46,7 @@
 }
 
 .item:hover{
-  background-color: #121212;
+  background-color: #dadada;
 }
 
 .iframe{
