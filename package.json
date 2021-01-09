@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "@adobe/react-spectrum": "^3.7.0",
+    "@chakra-ui/react": "^1.1.2",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
     "@types/mongodb": "^3.6.3",
     "@types/nprogress": "^0.2.0",
     "axios": "^0.21.1",
-    "bootstrap": "^4.5.3",
+    "framer-motion": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.10",
@@ -28,6 +31,7 @@
     "@types/next-auth": "^3.1.19",
     "@types/node": "^14.14.16",
     "@types/react": "^17.0.0",
+    "image-webpack-loader": "^7.0.1",
     "typescript": "^4.1.3"
   }
 }

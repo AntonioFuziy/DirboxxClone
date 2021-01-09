@@ -6,7 +6,7 @@
 }
 
 .main{
-    max-width: 700px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,19 +31,10 @@
 }
 
 .description1, .description2{
-    width: 250px;
+    min-width: 250px;
     font-size: 16px;
     line-height: 25px;
     font-weight: 400;
-}
-
-.buttons{
-    margin-left: -15px;
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .signOut, .signIn{
@@ -52,7 +43,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
+
     border: 0;
     border-radius: 10px;
     width: 150px;
@@ -80,12 +71,13 @@
 }
 
 .footer{
+    max-width: 450px;
     margin-top: 20px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .options{
@@ -124,11 +116,17 @@
 
     height: 50px;
     width: 90%;
-    max-width: 400px;
     background-color: #567DF4;
     transition: background-color 0.3s;
 }
 
 .signUp:hover{
     background-color: #567df4bb;
+}
+
+@media (max-width: 750px){
+    .footer{
+        align-items: center;
+        justify-content: center;
+    }
 }
