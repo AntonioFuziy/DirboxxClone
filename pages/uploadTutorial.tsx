@@ -7,6 +7,7 @@ import axios from 'axios';
 import { signIn, signOut, useSession } from 'next-auth/client'
 import Link from 'next/link';
 import { useToast } from "@chakra-ui/react"
+import { useRouter } from 'next/router';
 
 export default function UploadTutorial(){
   const [session, loading] = useSession();
@@ -19,7 +20,8 @@ export default function UploadTutorial(){
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
   const [redirect, setRedirect] = useState(false);
-  const toast = useToast()
+  const router = useRouter();
+  const toast = useToast();
 
   useEffect(() => {
     function setSession(){
@@ -47,14 +49,19 @@ export default function UploadTutorial(){
     try{
       axios.post("http://localhost:3000/api/tutorials", data)
       toast({
+        position: "top-right",
         title: "Uploaded.",
         description: "We've uploaded your video.",
         status: "success",
         duration: 9000,
         isClosable: true,
       })
+      setTimeout(() => {
+        router.push("/search")
+      }, 1500)
     } catch(error){
       toast({
+        position: "top-right",
         title: "Error.",
         description: error,
         status: "error",

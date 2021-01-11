@@ -1,7 +1,7 @@
 import { Provider } from 'next-auth/client'
 import { useEffect, useState } from 'react';
 
-import { ChakraProvider } from "@chakra-ui/react"
+import { ThemeProvider, theme, CSSReset } from '@chakra-ui/react'
 
 import Spinner from './components/Spinner/Spinner';
 
@@ -18,11 +18,12 @@ function MyApp({ Component, pageProps }) {
       {isLoading ? (
         <Spinner/>
       ):(
-        <ChakraProvider>
+        <ThemeProvider theme={theme}>
           <Provider session={pageProps.session}>
+            <CSSReset/>
             <Component {...pageProps} />
           </Provider>
-        </ChakraProvider>
+        </ThemeProvider>
       )}
     </>
   )

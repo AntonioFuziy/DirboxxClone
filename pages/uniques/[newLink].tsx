@@ -23,6 +23,7 @@ export default function Video({ video, listVideos }){
           <input type="text" defaultValue={query.newLink} name="newLink" className={styles.inputNone}/>
         </div>
         <ul className={styles.list}>
+          <h3>Other Videos</h3>
           {
             listVideos.map((item) => (
               <a href={"/uniques/"+item.newLink}>

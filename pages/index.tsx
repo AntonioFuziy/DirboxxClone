@@ -54,9 +54,9 @@ export default function Sign(){
             <Image src="/images/facebookLogo.png" width={10.07} height={18.63} className={styles.facebook}/>
           </div>
         </div>
-        <Link href="/signUp">
+        <Link href="/search">
           <button className={styles.signUp}>
-            Create an account
+            Search Videos
           </button>
         </Link>
       </footer>

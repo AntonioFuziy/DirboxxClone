@@ -1,7 +1,9 @@
 
 .subHeader{
-    font-weight: 500;
+  font-weight: 500;
   width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   
   display: flex;
   flex-direction: row;
@@ -19,4 +21,26 @@
 
 .actions img{
   cursor: pointer;
+}
+
+.upload{
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  background-color: #567DF4;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload:hover{
+  background-color: #567df4bb;
 }

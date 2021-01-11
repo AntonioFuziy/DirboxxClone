@@ -27,13 +27,9 @@ export default function Search({ videos }){
       <SubHeader/>
       <input type="text" name="search" id="" placeholder="Search Folder"/>
       {isLoading ? (
-        <>
-          <Spinner/>
-        </>
+        <Spinner/>
       ) : (
-        <>
-          <SearchVideosList videos={videos}/>
-        </>
+        <SearchVideosList videos={videos}/>
       )}
     </div>
   )

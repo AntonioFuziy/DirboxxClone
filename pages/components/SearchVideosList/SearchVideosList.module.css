@@ -9,13 +9,11 @@
 
 .item{
   display: flex;
-  flex-direction: row;
   border-radius: 10px;
   padding: 20px;
   cursor: pointer;
-  width: 100%;
-  background: #f0f0f0;
-  color: #000;
+  background: #121212;
+  color: #f0f0f0;
   margin-bottom: 20px;
   transition: background-color 0.3s;
 }
@@ -25,7 +23,17 @@
 }
 
 .item:hover{
-  background-color: #dadada;
+  background-color: #212121;
+}
+
+.text h3{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.text p{
+  font-size: 16px;
+  margin-top: 5px;
 }
 
 .iframe{
@@ -35,11 +43,27 @@
 }
 
 .likes{
-  width: 100px;
+  font-weight: bold;
+  margin-top: 20px;
+
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.likeSubcontent{
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.likeIcon{
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 700px){
@@ -52,5 +76,11 @@
 
   .item{
     margin-bottom: 30px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .text{
+    margin-top: 20px;
   }
 }
