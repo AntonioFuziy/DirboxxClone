@@ -11,7 +11,7 @@ export default function Search({ videos }){
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseLoading = await fetch("http://localhost:3000/api/tutorials");
+      const responseLoading = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
       const dataLoading = await responseLoading.json();
       setIsLoading(false)
     }
@@ -36,7 +36,7 @@ export default function Search({ videos }){
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch("http://localhost:3000/api/tutorials");
+  const response = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
   const data = await response.json();
 
   return{

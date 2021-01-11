@@ -42,7 +42,7 @@ export default function Video({ video, listVideos }){
 }
 
 export const getStaticPaths: GetStaticPaths = async () =>{
-  const response = await fetch(`http://localhost:3000/api/tutorials`);
+  const response = await fetch(`https://dirboxx-clone.vercel.app/api/tutorials`);
   const data = await response.json();
   console.log(data)
 
@@ -74,10 +74,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
   }
 
-  const response = await fetch(`http://localhost:3000/api/video`, options);
+  const response = await fetch(`https://dirboxx-clone.vercel.app/api/video`, options);
   const data = await response.json();
 
-  const list = await fetch("http://localhost:3000/api/tutorials");
+  const list = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
   const listVideosData = await list.json();
 
   return{

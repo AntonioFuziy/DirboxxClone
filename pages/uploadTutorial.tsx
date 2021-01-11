@@ -47,7 +47,7 @@ export default function UploadTutorial(){
     console.log(data)
 
     try{
-      axios.post("http://localhost:3000/api/tutorials", data)
+      axios.post("https://dirboxx-clone.vercel.app/api/tutorials", data)
       toast({
         position: "top-right",
         title: "Uploaded.",
