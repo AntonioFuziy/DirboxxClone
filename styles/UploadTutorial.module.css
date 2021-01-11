@@ -25,13 +25,15 @@
 }
 
 .subtitle{
+  font-weight: bold;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .inputTitle, .inputDescription, .inputLink{
   padding: 10px;
   margin-bottom: 30px;
-  border: 1px solid #cacaca;
+  background-color: #121212;
   border-radius: 10px;
 }
 
@@ -81,6 +83,44 @@
   height: 20px;
 }
 
+.notLogged{
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  margin-top: -350px;  
+  padding: 30px;
+  background-color: #121212;
+}
+
+.notLogged h1{
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.signIn{
+  color: #f0f0f0;
+  background: #567DF4;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border: 0;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signIn:hover{
+  background-color: #567df4bb;
+}
+
+
 @media (max-width: 700px){
   .form{
     width: 100%;
@@ -88,5 +128,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .notLogged{
+    margin-top: -200px;  
   }
 }

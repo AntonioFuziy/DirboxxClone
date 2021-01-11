@@ -1,0 +1,86 @@
+
+.grid{
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  background: #121212;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.text{
+  margin-left: 30px;
+}
+
+.item:hover{
+  background-color: #212121;
+}
+
+.text h3{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.text p{
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.iframe{
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.likes{
+  font-weight: bold;
+  margin-top: 20px;
+
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.likeSubcontent{
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.likeIcon{
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 700px){
+  .grid{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item{
+    margin-bottom: 30px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .text{
+    margin-top: 20px;
+  }
+}

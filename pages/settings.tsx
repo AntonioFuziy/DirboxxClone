@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styles from '../styles/Settings.module.css';
+import { Switch } from "@chakra-ui/react"
 
-import { FormCheck } from 'react-bootstrap';
 
 export default function Settings(){
   return(
@@ -19,17 +19,11 @@ export default function Settings(){
         <p className={styles.options}>Multiple Account</p>
         <div className={styles.advanced}>
           <h4>Enable Sync</h4>
-          <FormCheck 
-              type="switch"
-              id="custom-switch"
-          />
+          <Switch/>
         </div>
         <div className={styles.advanced}>
           <h4>Enable 2 Step Verification</h4>
-            <FormCheck 
-              type="switch"
-              id="custom-switch"
-            />
+            <Switch/>
         </div>
       </div>
     </div>

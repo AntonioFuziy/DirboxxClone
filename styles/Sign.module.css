@@ -6,7 +6,7 @@
 }
 
 .main{
-    max-width: 700px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -19,6 +19,10 @@
     height: 500px;
 }
 
+.text{
+    margin-top: 30px;
+}
+
 .welcome{
     font-size: 18px;
     font-weight: lighter;
@@ -27,32 +31,27 @@
 }
 
 .name{
+    font-weight: bold;
+    margin-top: 30px;
     font-size: 36px;
 }
 
 .description1, .description2{
-    width: 250px;
+    min-width: 250px;
     font-size: 16px;
     line-height: 25px;
     font-weight: 400;
 }
 
-.buttons{
-    margin-left: -15px;
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.id, .signIn{
+.signOut, .signIn{
     font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
+
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 0;
     border-radius: 10px;
     width: 150px;
@@ -65,8 +64,8 @@
     background-color: #567df4bb;
 }
 
-.id:hover{
-    background-color: #567df4a6;
+.signOut:hover{
+    background-color: #ec5858b7;
 }
 
 .signIn{
@@ -74,18 +73,19 @@
     background: #567DF4;
 }
 
-.id{
-    color: #567DF4;
-    background: #567df43a;
+.signOut{
+    color: #f0f0f0;
+    background: #ec5858;
 }
 
 .footer{
+    max-width: 450px;
     margin-top: 20px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .options{
@@ -96,6 +96,7 @@
 }
 
 .options p{
+    margin-top: 5px;
     font-size: 12px;
     font-weight: 300;
 }
@@ -103,11 +104,12 @@
 .images{
     width: 50%; 
     max-width: 400px;
+    margin-top: 10px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .instagram, .twitter, .facebook{
@@ -123,12 +125,22 @@
     cursor: pointer;
 
     height: 50px;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
     background-color: #567DF4;
     transition: background-color 0.3s;
 }
 
 .signUp:hover{
     background-color: #567df4bb;
+}
+
+@media (max-width: 750px){
+    .footer{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signUp{
+        width: 90%;
+    }
 }
