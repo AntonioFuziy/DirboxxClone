@@ -5,14 +5,16 @@ import styles from '../styles/Search.module.css';
 import SubHeader from './components/SubHeader/SubHeader';
 import SearchVideosList from './components/SearchVideosList/SearchVideosList';
 import Spinner from './components/Spinner/Spinner';
+import axios from 'axios'
 
 export default function Search({ videos }){
   const [isLoading, setIsLoading] = useState(true);
+  const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseLoading = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
-      const dataLoading = await responseLoading.json();
+      const responseLoading = await axios.get("/api/tutorials");
+      const dataLoading = await responseLoading.data;
       setIsLoading(false)
     }
     fetchData()
@@ -36,8 +38,8 @@ export default function Search({ videos }){
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
-  const data = await response.json();
+  const response = await axios.get("/api/tutorials");
+  const data = await response.data;
 
   return{
     props: {

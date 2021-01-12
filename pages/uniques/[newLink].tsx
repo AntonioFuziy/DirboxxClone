@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import styles from "../../styles/videoPage.module.css";
+import axios from 'axios';
 
 export default function Video({ video, listVideos }){
   const { query } = useRouter();
@@ -42,8 +43,8 @@ export default function Video({ video, listVideos }){
 }
 
 export const getStaticPaths: GetStaticPaths = async () =>{
-  const response = await fetch(`https://dirboxx-clone.vercel.app/api/tutorials`);
-  const data = await response.json();
+  const response = await axios.get(`/api/tutorials`);
+  const data = await response.data;
   console.log(data)
 
   const paths = data.map(member => {
@@ -74,11 +75,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
   }
 
-  const response = await fetch(`https://dirboxx-clone.vercel.app/api/video`, options);
+  const response = await fetch(`/api/video`, options);
   const data = await response.json();
 
-  const list = await fetch("https://dirboxx-clone.vercel.app/api/tutorials");
-  const listVideosData = await list.json();
+  const list = await axios.get("/api/tutorials");
+  const listVideosData = await list.data;
 
   return{
     props: {

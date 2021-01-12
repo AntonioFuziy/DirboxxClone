@@ -1,15 +1,8 @@
-import { NextApiRequest, NextApiResponse } from "next";
+// import { NextApiRequest, NextApiResponse } from "next";
+import { NowRequest, NowResponse } from '@vercel/node';
 import connectDatabase from '../../utils/database';
-interface ErrorResponseType{
-  error: string
-}
-interface SuccessResponseType{
-  _id: string;
-  email: string;
-  password: string;
-}
 
-export default async(req: NextApiRequest, res:NextApiResponse<ErrorResponseType | SuccessResponseType>): Promise<void> => {
+export default async(req: NowRequest, res:NowResponse): Promise<void> => {
   if(req.method === "POST"){
     const { email, password } = req.body;
 

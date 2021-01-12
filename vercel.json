@@ -1,0 +1,27 @@
+{
+  "routes": [
+    {
+      "src": "/search",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "dest": "/api/tutorials.ts"
+    },
+    {
+      "src": "/uploadTutorial",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "dest": "/api/tutorials.ts"
+    },
+    {
+      "src": "/uniques/[newLink]",
+      "methods": [
+        "GET"
+      ],
+      "dest": "/api/video.ts"
+    }
+  ]
+}
