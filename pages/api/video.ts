@@ -1,7 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// import { NextApiRequest, NextApiResponse } from 'next';
+import { NowRequest, NowResponse } from '@vercel/node';
 import connectDatabase from '../../utils/database';
 
-export default async (req:NextApiRequest, res:NextApiResponse): Promise<void> => {
+export default async (req:NowRequest, res:NowResponse): Promise<void> => {
   const { newLink } = req.body;
 
   if(!newLink){
